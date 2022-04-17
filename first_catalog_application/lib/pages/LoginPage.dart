@@ -14,37 +14,43 @@ class LoginPage extends StatelessWidget {
         ),
       ),*/
       color: Colors.white,
-      child: Column(children: [
-        Image.asset("assets/images/login_image.png",
-            height: 300, width: 300, fit: BoxFit.contain),
-        const SizedBox(height: 10),
-        const Text(
-          "Welcome to the Login Page",
-          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-        ),
-        const SizedBox(height: 10),
-        Padding( //padding: EdgeInsets.symetric(vertical:20,horizontal:40)
-          padding: const EdgeInsets.all(20.0),
-          child: Column(
-            children: [
-              TextFormField(
-                  decoration: const InputDecoration(
-                      labelText: "User Name", hintText: "Enter your username")),
-              TextFormField(
-                obscureText: true,
-                  decoration: const InputDecoration(
-                      labelText: "Password", hintText: "Enter your password")),
-              SizedBox(height:20),
-              ElevatedButton(
-                style:TextButton.styleFrom(),
-                child: Text("Sign In"),
-                onPressed: () {
-                  print("Welcome to the Catalog App by Aritra Roy");
-                },)
-            ],
+      child: SingleChildScrollView(
+        child: Column(children: [
+          Image.asset("assets/images/login_image.png",
+              height: 300, width: 300, fit: BoxFit.contain),
+          const SizedBox(height: 10),
+          const Text(
+            "Welcome to the Login Page",
+            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
           ),
-        ),
-      ]),
+          SizedBox(height: 10),
+          Padding(
+            //padding: EdgeInsets.symetric(vertical:20,horizontal:40)
+            padding: const EdgeInsets.all(20.0),
+            child: Column(
+              children: [
+                TextFormField(
+                    decoration: const InputDecoration(
+                        labelText: "User Name",
+                        hintText: "Enter your username")),
+                TextFormField(
+                    obscureText: true,
+                    decoration: const InputDecoration(
+                        labelText: "Password",
+                        hintText: "Enter your password")),
+                SizedBox(height: 40),
+                ElevatedButton(
+                  style: TextButton.styleFrom(minimumSize: Size(100,40)),
+                  child: const Text("Sign In", style:TextStyle(fontSize:16, fontWeight: FontWeight.bold)),
+                  onPressed: () {
+                    print("Welcome to the Catalog App by Aritra Roy");
+                  },
+                )
+              ],
+            ),
+          ),
+        ]),
+      ),
     );
   }
 }
