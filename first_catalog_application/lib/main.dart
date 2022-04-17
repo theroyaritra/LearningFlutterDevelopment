@@ -1,6 +1,8 @@
 /*import 'dart:ffi';*/
-import 'package:first_catalog_application/homepage.dart';
 import 'package:flutter/material.dart';
+import 'package:first_catalog_application/pages/HomePage.dart';
+import 'package:first_catalog_application/pages/LoginPage.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -17,9 +19,22 @@ class MyApp extends StatelessWidget {
     var day = "Tuesday"; // Automically fixes datatype to any type of value
     const pi=3.14; //const datatype values take numerical values, but are unalterable once declared
     final m=5.89; // Its same as const datatype but its value can be changed later
+    bringVegetables(thaila:true);
     return MaterialApp(
-      home: HomePage(),
+      //home: HomePage(),
+      themeMode: ThemeMode.light,
+      theme:ThemeData(primarySwatch: Colors.cyan),
+      darkTheme: ThemeData(brightness:Brightness.light),
+      initialRoute: '/',
+      routes:{
+        "/": (context) => LoginPage(),
+        "/home" : (context) => HomePage(),
+      }
     );
+  }
+
+  bringVegetables({@required thaila,int rupees=500}){
+
   }
 }
 
