@@ -9,14 +9,14 @@ class HomePage extends StatelessWidget {
     final String name = "Name : Aritra Roy, Email : roy20042000@gmail.com";
     return Scaffold(
       appBar: AppBar(
-        title: Text("Catalog Application")
+        title: const Text("Catalog Application")
       ),
         body: Center(
           child: Container(
             child: Text("Welcome to $days days of Flutter course by " + name),
           ),
         ),      
-      drawer: Drawer(),
+      drawer: const Drawer(),
     );
   }
 }
