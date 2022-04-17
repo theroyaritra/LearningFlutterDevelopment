@@ -1,4 +1,5 @@
 /*import 'dart:ffi';*/
+import 'package:first_catalog_application/utils/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:first_catalog_application/pages/HomePage.dart';
 import 'package:first_catalog_application/pages/LoginPage.dart';
@@ -32,8 +33,9 @@ class MyApp extends StatelessWidget {
       darkTheme: ThemeData(brightness:Brightness.light),
       initialRoute: "/",
       routes:{
-        "/": (context) => LoginPage(),
-        "/home" : (context) => HomePage(),
+        "/" : (context) => LoginPage(),
+        MyRoutes.loginRoute: (context) => LoginPage(),
+        MyRoutes.homeRoute : (context) => HomePage(),
       }
     );
   }
