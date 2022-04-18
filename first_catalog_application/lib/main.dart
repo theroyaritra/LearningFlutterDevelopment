@@ -31,9 +31,10 @@ class MyApp extends StatelessWidget {
         primaryTextTheme: GoogleFonts.latoTextTheme()
       ),
       darkTheme: ThemeData(brightness:Brightness.light),
+      debugShowCheckedModeBanner: false, //To remove the debug banner
       initialRoute: "/",
       routes:{
-        "/" : (context) => LoginPage(),
+        "/" : (context) => HomePage(),
         MyRoutes.loginRoute: (context) => LoginPage(),
         MyRoutes.homeRoute : (context) => HomePage(),
       }
